@@ -1,0 +1,40 @@
+@page
+@model PrivacyModel
+@{
+  ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<ol>
+  <li>This document explains which personal data is processed on the AuthServer website (<a href="/">auth.eid.gedas.dev</a>) for use as part of master's thesis research.</li>
+  <li>
+    Information we process:
+    <ol>
+      <li>User's eID authentication data, which can include: given name, surname, country of eID issue, unique identifier provided by eID, birth date;</li>
+    </ol>
+  </li>
+  <li>
+    Information we store:
+    <ol>
+      <li>registration email address as part of the account creation process;</li>
+      <li>user's country and unique identifier as provider by services used for external authentication;</li>
+    </ol>
+  </li>
+  <li>
+    Data retention policy:
+    <ol>
+      <li>all data is wiped from the application at 00:00, Estonia time;</li>
+      <li>users can manually remove their data by visiting the <a asp-page="Account/Manage/PersonalData" asp-area="Identity">personal data</a> page; effective immediately;</li>
+      <li>users can download their personal data on the same page as (4.2);</li>
+    </ol>
+  </li>
+  <li>
+      Data shared with third-parties:
+      <ol>
+        <li>information received from Dokobit service is subject to UAB Dokobit privacy policy;</li>
+        <li>information received from Web eID service is subject to RIA's privacy policy;</li>
+        <li>information received from eeID service is subject to internet.ee privacy policy;</li>
+        <li>when checking the validity of certificates, the issuer defined in the certificate received will receive a certificate identifying information to validate the revocation status;</li>
+      </ol>
+    </li>
+</ol>

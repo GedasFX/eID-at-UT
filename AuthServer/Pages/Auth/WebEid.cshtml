@@ -1,0 +1,21 @@
+﻿@page
+@model AuthServer.Pages.Auth.WebEid
+
+@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery _csrf
+
+@{ var csrfToken = _csrf.GetAndStoreTokens(HttpContext); }
+
+<input id="csrfToken" type="hidden" value="@csrfToken.RequestToken"/>
+
+<div class="container">
+  <h1>Web eID authentication</h1>
+  <p>This sign in method requires special software. You can download it <a href="https://web-eid.eu/">here</a>.</p>
+  <p>If software is installed and enabled in the browser, sign in procedures should have started. If they haven't yet, click <a href="#" role="button" id="webeid-auth-button">here</a>.</p>
+
+  <div id="webeid-error-box" class="alert alert-danger" style="visibility: hidden"></div>
+</div>
+
+
+@section Scripts {
+  <script type="module" src="/js/id-auth-handler.js"></script>
+}
